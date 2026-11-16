@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5967E1AE-EEF3-46F2-B88F-119B933C0893}|FileSageAPI.csproj|c:\\users\\joao.gregorini\\codigos\\github\\cofre_de_arquivos\\filesageapi\\database\\models\\archive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5967E1AE-EEF3-46F2-B88F-119B933C0893}|FileSageAPI.csproj|solutionrelative:database\\models\\archive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5967E1AE-EEF3-46F2-B88F-119B933C0893}|FileSageAPI.csproj|c:\\users\\joao.gregorini\\codigos\\github\\cofre_de_arquivos\\filesageapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5967E1AE-EEF3-46F2-B88F-119B933C0893}|FileSageAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5967E1AE-EEF3-46F2-B88F-119B933C0893}|FileSageAPI.csproj|c:\\users\\joao.gregorini\\codigos\\github\\cofre_de_arquivos\\filesageapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5967E1AE-EEF3-46F2-B88F-119B933C0893}|FileSageAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5967E1AE-EEF3-46F2-B88F-119B933C0893}|FileSageAPI.csproj|c:\\users\\joao.gregorini\\codigos\\github\\cofre_de_arquivos\\filesageapi\\database\\maps\\tagmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5967E1AE-EEF3-46F2-B88F-119B933C0893}|FileSageAPI.csproj|solutionrelative:database\\maps\\tagmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5967E1AE-EEF3-46F2-B88F-119B933C0893}|FileSageAPI.csproj|c:\\users\\joao.gregorini\\codigos\\github\\cofre_de_arquivos\\filesageapi\\database\\maps\\urlmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5967E1AE-EEF3-46F2-B88F-119B933C0893}|FileSageAPI.csproj|solutionrelative:database\\maps\\urlmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5967E1AE-EEF3-46F2-B88F-119B933C0893}|FileSageAPI.csproj|c:\\users\\joao.gregorini\\codigos\\github\\cofre_de_arquivos\\filesageapi\\database\\maps\\bookmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5967E1AE-EEF3-46F2-B88F-119B933C0893}|FileSageAPI.csproj|solutionrelative:database\\maps\\bookmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5967E1AE-EEF3-46F2-B88F-119B933C0893}|FileSageAPI.csproj|c:\\users\\joao.gregorini\\codigos\\github\\cofre_de_arquivos\\filesageapi\\database\\maps\\authormap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5967E1AE-EEF3-46F2-B88F-119B933C0893}|FileSageAPI.csproj|solutionrelative:database\\maps\\authormap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5967E1AE-EEF3-46F2-B88F-119B933C0893}|FileSageAPI.csproj|c:\\users\\joao.gregorini\\codigos\\github\\cofre_de_arquivos\\filesageapi\\database\\maps\\archivemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5967E1AE-EEF3-46F2-B88F-119B933C0893}|FileSageAPI.csproj|solutionrelative:database\\maps\\archivemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Archive.cs",
+              "DocumentMoniker": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\Database\\Models\\Archive.cs",
+              "RelativeDocumentMoniker": "Database\\Models\\Archive.cs",
+              "ToolTip": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\Database\\Models\\Archive.cs",
+              "RelativeToolTip": "Database\\Models\\Archive.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T14:47:57.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAuwFMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T14:43:02.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-16T14:42:48.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TagMap.cs",
+              "DocumentMoniker": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\Database\\Maps\\TagMap.cs",
+              "RelativeDocumentMoniker": "Database\\Maps\\TagMap.cs",
+              "ToolTip": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\Database\\Maps\\TagMap.cs",
+              "RelativeToolTip": "Database\\Maps\\TagMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T14:42:34.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UrlMap.cs",
+              "DocumentMoniker": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\Database\\Maps\\UrlMap.cs",
+              "RelativeDocumentMoniker": "Database\\Maps\\UrlMap.cs",
+              "ToolTip": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\Database\\Maps\\UrlMap.cs",
+              "RelativeToolTip": "Database\\Maps\\UrlMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T14:42:33.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookMap.cs",
+              "DocumentMoniker": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\Database\\Maps\\BookMap.cs",
+              "RelativeDocumentMoniker": "Database\\Maps\\BookMap.cs",
+              "ToolTip": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\Database\\Maps\\BookMap.cs",
+              "RelativeToolTip": "Database\\Maps\\BookMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T14:42:31.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthorMap.cs",
+              "DocumentMoniker": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\Database\\Maps\\AuthorMap.cs",
+              "RelativeDocumentMoniker": "Database\\Maps\\AuthorMap.cs",
+              "ToolTip": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\Database\\Maps\\AuthorMap.cs",
+              "RelativeToolTip": "Database\\Maps\\AuthorMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T14:42:31.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ArchiveMap.cs",
+              "DocumentMoniker": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\Database\\Maps\\ArchiveMap.cs",
+              "RelativeDocumentMoniker": "Database\\Maps\\ArchiveMap.cs",
+              "ToolTip": "C:\\Users\\joao.gregorini\\Codigos\\GitHub\\Cofre_de_Arquivos\\FileSageAPI\\Database\\Maps\\ArchiveMap.cs",
+              "RelativeToolTip": "Database\\Maps\\ArchiveMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T14:42:27.377Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

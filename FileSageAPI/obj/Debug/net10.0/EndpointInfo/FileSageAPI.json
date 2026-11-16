@@ -1,0 +1,10 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "FILE API",
+    "description": "API para gerenciamento de arquivos",
+    "version": "v1"
+  },
+  "paths": { },
+  "components": { }
+}

@@ -1,0 +1,6 @@
+@FileSageAPI_HostAddress = http://localhost:5128
+
+GET {{FileSageAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
