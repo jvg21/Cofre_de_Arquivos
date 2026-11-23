@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FileSageAPI.Database.Maps
 {
-    public class ArchiveMap: IEntityTypeConfiguration<Archive>
+    public class ArchiveMap: IEntityTypeConfiguration<ArchiveModel>
     {
-        public void Configure(EntityTypeBuilder<Archive> builder)
+        public void Configure(EntityTypeBuilder<ArchiveModel> builder)
         {
             builder.ToTable("archive");
             builder.HasKey(ci => ci.Id);

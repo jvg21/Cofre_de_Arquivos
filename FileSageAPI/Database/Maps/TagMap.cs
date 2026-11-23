@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FileSageAPI.Database.Maps
 {
-    public class TagMap : IEntityTypeConfiguration<Tag>
+    public class TagMap : IEntityTypeConfiguration<TagModel>
     {
-        public void Configure(EntityTypeBuilder<Tag> builder)
+        public void Configure(EntityTypeBuilder<TagModel> builder)
         {
             builder.ToTable("tag");
             builder.HasKey((t) => t.Id);
@@ -18,7 +18,7 @@ namespace FileSageAPI.Database.Maps
 
             builder.HasIndex(t => new { t.Type, t.Content }).IsUnique();
 
-            builder.HasMany(t => t.Archives).WithMany(ci => ci.Tags).UsingEntity<ArchiveTag>(
+            builder.HasMany(t => t.Archives).WithMany(ci => ci.Tags).UsingEntity<ArchiveTagModel>(
                     j => j.HasOne(cit => cit.Archive).WithMany().HasForeignKey(cit => cit.ArchiveId),
                     j => j.HasOne(cit => cit.Tag).WithMany().HasForeignKey(cit => cit.TagId),
                     j =>

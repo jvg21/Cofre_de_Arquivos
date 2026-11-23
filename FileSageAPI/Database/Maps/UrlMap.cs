@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FileSageAPI.Database.Maps
 {
-    public class UrlMap:IEntityTypeConfiguration<Url>
+    public class UrlMap:IEntityTypeConfiguration<UrlModel>
     {
-        public void Configure(EntityTypeBuilder<Url> builder)
+        public void Configure(EntityTypeBuilder<UrlModel> builder)
         {
             builder.ToTable("url");
 

@@ -1,0 +1,90 @@
+/* ==========================================================================
+ NOTIFICAÇÕES (TOASTS)
+   ========================================================================== */
+
+@keyframes notificationSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(24px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.notification {
+    width: 320px;
+    min-height: 64px;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    box-sizing: border-box;
+    padding: 11px 16px;
+
+    border: 1px solid var(--border);
+    border-left-width: 4px;
+    border-radius: 10px;
+
+    background-color: var(--accent-bg);
+    color: var(--text-h);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12), 0 12px 30px rgba(0, 0, 0, 0.08);
+    font-size: 11px;
+
+    animation: notificationSlideIn var(--transition-base);
+    transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.notification:hover {
+    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.15), 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+.notification h3 {
+    margin: 0 0 3px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.failure {
+    border-left-color: var(--failure-red);
+}
+
+.failure h3 {
+    color: var(--failure-red);
+}
+
+.success {
+    border-left-color: var(--success-green);
+}
+
+.success h3 {
+    color: var(--success-green);
+}
+
+.warning {
+    border-left-color: var(--warning-yellow);
+}
+
+.warning h3 {
+    color: var(--warning-yellow);
+}
+
+@media (max-width: 480px) {
+    .notification {
+        width: calc(100% - 20px);
+        top: 10px;
+        right: 10px;
+        min-height: 60px;
+        padding: 10px 14px;
+    }
+}

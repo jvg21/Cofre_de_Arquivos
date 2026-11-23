@@ -1,4 +1,12 @@
 :root {
+  --success-green: hsl(140, 60%, 28%);
+  --lime-green: hsl(84, 100%, 44%);
+  --warning-yellow: #d95f0e;
+  --failure-red: hsl(355, 65%, 35%);
+  --ice-blue: hsl(205, 92%, 49%);
+  --white: #fff;
+
+
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
@@ -44,15 +52,10 @@
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
   }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
 }
 
-#root {
-
-  margin: 0 ;
-  padding: 0;
+* {
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }

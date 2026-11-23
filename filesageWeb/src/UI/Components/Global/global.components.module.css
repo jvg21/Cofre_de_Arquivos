@@ -1,0 +1,29 @@
+/* --header-height: 70px; */
+
+.outlet{
+    min-height: calc(100vh - 70px);
+    background-color: var(--bg);
+}
+
+.header{
+    height: 70px;
+    width: 100%;
+    background-color: var(--accent);
+}
+
+
+.menuBox{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+
+    opacity: 0;
+    background-color: aqua;
+}
+
+.menuBox.menuOpen{
+    opacity: 1;
+}

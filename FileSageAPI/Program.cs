@@ -1,6 +1,11 @@
 using FileSageAPI.Database.AppDbContext;
+using FileSageAPI.Entities.Archive.Interfaces;
+using FileSageAPI.Entities.Archive.Layers;
+using FileSageAPI.Entities.Tag.Interfaces;
+using FileSageAPI.Entities.Tag.Layers;
+using FileSageAPI.Entities.Url;
+using FileSageAPI.Entities.Url.Interfaces;
 using FileSageAPI.Middleware;
-using Microsoft.AspNetCore.DataProtection.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
 
@@ -41,17 +46,16 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 #region Dependency Injection
 
-//builder.Services.AddScoped<ITagRepository, TagRepository>();
+builder.Services.AddScoped<ITagRepository, TagRepository>();
 ////builder.Services.AddScoped<ITagValidator, TagValidator>();
-//builder.Services.AddScoped<ITagService, TagService>();
+builder.Services.AddScoped<ITagService, TagService>();
 
-//builder.Services.AddScoped<IArchiveRepository, ArchiveRepository>();
-////builder.Services.AddScoped<IArchiveValidator, ArchiveValidator>();
-//builder.Services.AddScoped<IArchiveService, ArchiveService>();
+builder.Services.AddScoped<IArchiveRepository, ArchiveRepository>();
+builder.Services.AddScoped<IArchiveService, ArchiveService>();
 
-//builder.Services.AddScoped<IUrlRepository, UrlRepository>();
-////builder.Services.AddScoped<IUrlValidator, UrlValidator>();
-//builder.Services.AddScoped<IUrlService, UrlService>();
+builder.Services.AddScoped<IUrlRepository, UrlRepository>();
+//builder.Services.AddScoped<IUrlValidator, UrlValidator>();
+builder.Services.AddScoped<IUrlService, UrlService>();
 
 //builder.Services.AddScoped<IArchiveTagRepository, ArchiveTagRepository>();
 //builder.Services.AddScoped<IArchiveTagService, ArchiveTagService>();

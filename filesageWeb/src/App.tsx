@@ -1,12 +1,18 @@
-import { BrowserRouter} from "react-router-dom"
-import { Router } from "./Config/Router/Router"
+import { BrowserRouter } from "react-router-dom"
+import { Router } from "./Config/Router"
+import { NotificationProvider } from "./Data/Context/notification.context"
+import { ModalProvider } from "./Data/Context/modal.context"
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
-        <Router />
+        <NotificationProvider>
+          <ModalProvider>
+            <Router />
+          </ModalProvider>
+        </NotificationProvider>
       </BrowserRouter>
     </>
   )

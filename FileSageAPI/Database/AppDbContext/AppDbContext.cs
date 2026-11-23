@@ -9,14 +9,14 @@ namespace FileSageAPI.Database.AppDbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Archive> Archive { get; set; }
-        public DbSet<Url> Url { get; set; }
-        public DbSet<Tag> Tag { get; set; }
+        public DbSet<ArchiveModel> Archive { get; set; }
+        public DbSet<UrlModel> Url { get; set; }
+        public DbSet<TagModel> Tag { get; set; }
 
-        public DbSet<Author> Author { get; set; }
-        public DbSet<Book> Book { get; set; }
-        public DbSet<BookAuthor> BookAuthor { get; set; }
-        public DbSet<ArchiveTag> ArchiveTag { get; set; }
+        public DbSet<AuthorModel> Author { get; set; }
+        public DbSet<BookModel> Book { get; set; }
+        public DbSet<BookAuthorModel> BookAuthor { get; set; }
+        public DbSet<ArchiveTagModel> ArchiveTag { get; set; }
 
         //public DbSet<FileArchive> FileArchive { get; set; }
 
