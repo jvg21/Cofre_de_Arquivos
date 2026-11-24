@@ -13,6 +13,8 @@ namespace FileSageAPI.Database.Maps
             builder.HasKey(ci => ci.Id);
 
             builder.Property(ci => ci.RegisteredAt).Metadata.SetAfterSaveBehavior(PropertySaveBehavior.Throw);
+
+            builder.HasMany(a => a.Files).WithOne(f => f.Archive).HasForeignKey(a => a.ArchiveId).OnDelete(DeleteBehavior.Cascade); 
         }
     }
 }

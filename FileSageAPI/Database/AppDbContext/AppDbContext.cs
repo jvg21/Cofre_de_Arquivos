@@ -15,6 +15,7 @@ namespace FileSageAPI.Database.AppDbContext
 
         public DbSet<AuthorModel> Author { get; set; }
         public DbSet<BookModel> Book { get; set; }
+        public DbSet<FileArchiveModel> FileArchive { get; set; }
         public DbSet<BookAuthorModel> BookAuthor { get; set; }
         public DbSet<ArchiveTagModel> ArchiveTag { get; set; }
 

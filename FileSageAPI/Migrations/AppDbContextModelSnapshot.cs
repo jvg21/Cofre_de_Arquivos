@@ -134,6 +134,43 @@ namespace FileSageAPI.Migrations
                     b.ToTable("book", (string)null);
                 });
 
+            modelBuilder.Entity("FileSageAPI.Database.Models.FileArchiveModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ArchiveId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Extension")
+                        .HasColumnType("text");
+
+                    b.Property<string>("MimeType")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Path")
+                        .HasColumnType("text");
+
+                    b.Property<long?>("StorageBytes")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("StorageName")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ArchiveId");
+
+                    b.ToTable("FileArchive");
+                });
+
             modelBuilder.Entity("FileSageAPI.Database.Models.TagModel", b =>
                 {
                     b.Property<int>("Id")
@@ -247,6 +284,17 @@ namespace FileSageAPI.Migrations
                     b.Navigation("Archive");
                 });
 
+            modelBuilder.Entity("FileSageAPI.Database.Models.FileArchiveModel", b =>
+                {
+                    b.HasOne("FileSageAPI.Database.Models.ArchiveModel", "Archive")
+                        .WithMany("Files")
+                        .HasForeignKey("ArchiveId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Archive");
+                });
+
             modelBuilder.Entity("FileSageAPI.Database.Models.UrlModel", b =>
                 {
                     b.HasOne("FileSageAPI.Database.Models.ArchiveModel", "Archive")
@@ -263,6 +311,8 @@ namespace FileSageAPI.Migrations
                     b.Navigation("Author");
 
                     b.Navigation("Book");
+
+                    b.Navigation("Files");
 
                     b.Navigation("Urls");
                 });

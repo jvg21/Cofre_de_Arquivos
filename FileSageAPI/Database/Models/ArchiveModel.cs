@@ -11,6 +11,7 @@ namespace FileSageAPI.Database.Models
 
         public ICollection<UrlModel> Urls { get; set; } = new List<UrlModel>();
         public ICollection<TagModel> Tags { get; set; } = new List<TagModel>();
+        public ICollection<FileArchiveModel> Files { get; set; } = new List<FileArchiveModel>();
 
         public AuthorModel? Author { get; set; }
         public BookModel? Book { get; set; }
