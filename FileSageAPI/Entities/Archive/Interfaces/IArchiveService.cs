@@ -18,8 +18,7 @@ namespace FileSageAPI.Entities.Archive.Interfaces
         Task<List<ArchiveModel>> Insert(List<ArchiveInsertDTO> dtos, bool validate, bool save);
         Task<ArchiveModel> Update(ArchiveUpdateDTO dto, bool validate, bool save);
         Task<List<ArchiveModel>> Update(List<ArchiveUpdateDTO> dtos, bool validate, bool save);
-
-
-        //Task<List<ArchiveModel>> Delete(List<int> archives, bool validate, bool save);
+        Task<List<ArchiveModel>> Delete(List<int> archives, bool validate, bool save);
+        Task Save();
     }
 }

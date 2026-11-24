@@ -7,7 +7,7 @@ using Mapster;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
-namespace FileSageAPI.Entities.Url
+namespace FileSageAPI.Entities.Url.Layers
 {
     public class UrlService : IUrlService
     {

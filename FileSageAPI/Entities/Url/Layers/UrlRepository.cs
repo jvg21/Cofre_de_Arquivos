@@ -5,7 +5,7 @@ using FileSageAPI.Types.Exceptions;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace FileSageAPI.Entities.Url
+namespace FileSageAPI.Entities.Url.Layers
 {
     public class UrlRepository:IUrlRepository
     {

@@ -22,8 +22,6 @@ namespace FileSageAPI.Entities.Book.DTOs
         public ICollection<int>? UrlsRemove { get; set; }
         public ICollection<int>? TagsLink { get; set; }
         public ICollection<int>? TagsUnlink { get; set; }
-        //public ICollection<int>? AuthorsLink { get; set; }
-        //public ICollection<int>? AuthorsUnlink { get; set; }
         public bool? IsActive { get; set; }
     }
 }

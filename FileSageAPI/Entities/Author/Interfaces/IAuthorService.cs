@@ -5,7 +5,8 @@ namespace FileSageAPI.Entities.Author.Interfaces
 {
     public interface IAuthorService
     {
-
+        Task<List<ArchiveModel>> Get();
+        Task<ArchiveModel> Get(int id);
         Task<List<ArchiveModel>> InsertAuthor(List<AuthorInsertDTO> dtos, bool validate, bool save);
         Task<List<ArchiveModel>> UpdateAuthor(List<AuthorUpdateDTO> dtos, bool validate, bool save);
     }

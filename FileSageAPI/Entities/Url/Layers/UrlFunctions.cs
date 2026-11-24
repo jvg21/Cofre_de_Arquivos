@@ -1,4 +1,4 @@
-﻿namespace FileSageAPI.Entities.Url
+﻿namespace FileSageAPI.Entities.Url.Layers
 {
     public static class UrlFunctions
     {

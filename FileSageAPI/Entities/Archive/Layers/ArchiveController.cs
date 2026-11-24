@@ -31,12 +31,11 @@ namespace FileSageAPI.Entities.Archive.Layers
             return Ok(response.Adapt<ArchiveGetDTO>());
         }
 
-
-        //[HttpDelete]
-        //public async Task<IActionResult> Delete(List<int> archives)
-        //{
-        //    var response = await _service.Delete(archives, true, true);
-        //    return Ok(response.Adapt<List<ArchiveGetDTO>>());
-        //}
+        [HttpDelete]
+        public async Task<IActionResult> Delete(List<int> archives)
+        {
+            var response = await _service.Delete(archives, true, true);
+            return Ok(response.Adapt<List<ArchiveGetDTO>>());
+        }
     }
 }

@@ -2,7 +2,7 @@ using FileSageAPI.Database.Models;
 using FileSageAPI.Entities.Archive.DTOs;
 using FileSageAPI.Entities.Archive.Interfaces;
 using FileSageAPI.Entities.Tag.Interfaces;
-using FileSageAPI.Entities.Url;
+using FileSageAPI.Entities.Url.Layers;
 using FileSageAPI.Types.Exceptions;
 
 using Mapster;
@@ -107,52 +107,6 @@ namespace FileSageAPI.Entities.Archive.Layers
             return response;
         }
 
-        //public async Task<List<Archive>> InsertAuthor(List<AuthorInsertDTO> dtos, bool validate, bool save)
-        //{
-        //    var response = new List<Archive>();
-
-        //    foreach (var dto in dtos)
-        //    {
-
-        //        var archive = new ArchiveInsertDTO
-        //        {
-        //            TagsLink = dto.TagsLink,
-        //            Urls = dto.Urls,
-        //            Author = new Author
-        //            {
-        //                Name = dto.Name,
-        //            }
-        //        };
-
-        //        var request = await Insert(archive, validate, false);
-        //        response.Add(request);
-        //    }
-
-        //    if (save) await _repository.Save();
-        //    return response;
-        //}
-
-        //public async Task<List<Archive>> InsertBook(List<BookInsertDTO> dtos, bool validate, bool save)
-        //{
-        //    var response = new List<Archive>();
-
-        //    foreach (var dto in dtos)
-        //    {
-
-        //        var archive = new ArchiveInsertDTO
-        //        {
-        //            TagsLink = dto.TagsLink,
-        //            Urls = dto.Urls,
-        //            Book = dto.Adapt<Book>()
-        //        };
-
-        //        var request = await Insert(archive, validate, false);
-        //        response.Add(request);
-        //    }
-
-        //    if (save) await _repository.Save();
-        //    return response;
-        //}
 
 
         public async Task<ArchiveModel> Update(ArchiveUpdateDTO dto, bool validate, bool save)
@@ -223,80 +177,29 @@ namespace FileSageAPI.Entities.Archive.Layers
             return response;
         }
 
-        //public async Task<List<Archive>> UpdateBook(List<BookUpdateDTO> dtos, bool validate, bool save)
-        //{
-        //    var response = new List<Archive>();
+ 
+        public async Task<List<ArchiveModel>> Delete(List<int> archives, bool validate, bool save)
+        {
+            var uniqueIds = archives.Distinct().ToList();
+            if (uniqueIds.Count != archives.Count) throw new InvalidFormException("Duplicate archives found in the request");
 
-        //    foreach (var dto in dtos)
-        //    {
-        //        var book = await _repository.Get(dto.Id) ?? throw new EntityNotFoundException($"Archive {dto.Id} not found");
-        //        if (book.Book == null) throw new InvalidFormException($"Archive {dto.Id} not a Book");
+            var response = new List<ArchiveModel>();
 
-        //        var updatedBook = dto.Adapt(book.Book);
+            foreach (var urlId in uniqueIds)
+            {
+                //if(validate) validar se existe uma ligação com outras tabelas
+                var request = await _repository.Delete(new ArchiveModel { Id = urlId });
+                response.Add(request);
+            }
+            if (save) await _repository.Save();
 
-        //        var archive = new ArchiveUpdateDTO
-        //        {
-        //            Id = dto.Id,
-        //            TagsLink = dto.TagsLink,
-        //            TagsUnlink = dto.TagsUnlink,
-        //            UrlsInsert = dto.UrlsInsert,
-        //            UrlsRemove = dto.UrlsRemove,
-        //            IsActive = dto.IsActive,
-        //            Book = updatedBook
-        //        };
+            return response;
+        }
 
-        //        var request = await Update(archive, validate, false);
-        //        response.Add(request);
-        //    }
-
-
-        //    if (save) await _repository.Save();
-        //    return response;
-        //}
-
-        //public async Task<List<Archive>> UpdateAuthor(List<AuthorUpdateDTO> dtos, bool validate, bool save)
-        //{
-        //    var response = new List<Archive>();
-        //    foreach (var dto in dtos)
-        //    {
-        //        var author = await _repository.Get(dto.Id) ?? throw new EntityNotFoundException($"Archive {dto.Id} not found");
-        //        if (author.Author == null) throw new InvalidFormException($"Archive {dto.Id} not a Author");
-
-        //        var updatedAuthor = dto.Adapt(author.Author);
-
-        //        var archive = new ArchiveUpdateDTO
-        //        {
-        //            Id = dto.Id,
-        //            TagsLink = dto.TagsLink,
-        //            TagsUnlink = dto.TagsUnlink,
-        //            UrlsInsert = dto.UrlsInsert,
-        //            UrlsRemove = dto.UrlsRemove,
-        //            IsActive = dto.IsActive,
-        //            Author = updatedAuthor
-        //        };
-        //        var request = await Update(archive, validate, false);
-        //        response.Add(request);
-        //    }
-        //    if (save) await _repository.Save();
-        //    return response;
-        //}
-        //public async Task<List<Archive>> Delete(List<int> archives, bool validate, bool save)
-        //{
-        //    var uniqueIds = archives.Distinct().ToList();
-        //    if (uniqueIds.Count != archives.Count) throw new InvalidFormException("Duplicate archives found in the request");
-
-        //    var response = new List<Archive>();
-
-        //    foreach (var urlId in uniqueIds)
-        //    {
-        //        //if(validate) validar se existe uma ligação com outras tabelas
-        //        var request = await _repository.Delete(new Archive { Id = urlId });
-        //        response.Add(request);
-        //    }
-        //    if (save) await _repository.Save();
-
-        //    return response;
-        //}
+        public async Task Save()
+        {
+            await _repository.Save();
+        }
 
     }
 }

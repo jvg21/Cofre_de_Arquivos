@@ -1,10 +1,9 @@
-﻿
-using FileSageAPI.Entities.Url.DTOs;
+﻿using FileSageAPI.Entities.Url.DTOs;
 using FileSageAPI.Entities.Url.Interfaces;
 using Mapster;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FileSageAPI.Entities.Url
+namespace FileSageAPI.Entities.Url.Layers
 {
     [ApiController]
     [Route("[controller]")]

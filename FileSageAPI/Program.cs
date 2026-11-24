@@ -1,11 +1,21 @@
 using FileSageAPI.Database.AppDbContext;
+using FileSageAPI.Database.Models;
 using FileSageAPI.Entities.Archive.Interfaces;
 using FileSageAPI.Entities.Archive.Layers;
+using FileSageAPI.Entities.Author.DTOs;
+using FileSageAPI.Entities.Author.Interfaces;
+using FileSageAPI.Entities.Author.Layers;
+using FileSageAPI.Entities.Book.DTOs;
+using FileSageAPI.Entities.Book.Interfaces;
+using FileSageAPI.Entities.Book.Layers;
+using FileSageAPI.Entities.Tag.DTOs;
 using FileSageAPI.Entities.Tag.Interfaces;
 using FileSageAPI.Entities.Tag.Layers;
-using FileSageAPI.Entities.Url;
+using FileSageAPI.Entities.Url.DTOs;
 using FileSageAPI.Entities.Url.Interfaces;
+using FileSageAPI.Entities.Url.Layers;
 using FileSageAPI.Middleware;
+using Mapster;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
 
@@ -57,6 +67,11 @@ builder.Services.AddScoped<IUrlRepository, UrlRepository>();
 //builder.Services.AddScoped<IUrlValidator, UrlValidator>();
 builder.Services.AddScoped<IUrlService, UrlService>();
 
+
+builder.Services.AddScoped<IAuthorService, AuthorService>();
+
+builder.Services.AddScoped<IBookService,BookService>();
+
 //builder.Services.AddScoped<IArchiveTagRepository, ArchiveTagRepository>();
 //builder.Services.AddScoped<IArchiveTagService, ArchiveTagService>();
 
@@ -65,6 +80,18 @@ builder.Services.AddScoped<IUrlService, UrlService>();
 //builder.Services.AddScoped<IBookAuthorService, BookAuthorService>();
 
 
+
+#endregion
+
+
+# region MapsterConfig
+//TypeAdapterConfig.GlobalSettings.Default.PreserveReference(true);
+//TypeAdapterConfig<UrlUpdateDTO, UrlModel>.NewConfig().IgnoreNullValues(true).Ignore(dest => dest.Id);
+//TypeAdapterConfig<TagUpdateDTO, TagModel>.NewConfig().IgnoreNullValues(true).Ignore(dest => dest.Id);
+//TypeAdapterConfig<BookInsertDTO, Book>.NewConfig().Ignore(dest => dest.Authors);
+//TypeAdapterConfig<BookUpdateDTO, BookModel>.NewConfig().IgnoreNullValues(true).Ignore(dest => dest.ArchiveId).Ignore(dest => dest.Authors);
+//TypeAdapterConfig<AuthorUpdateDTO, AuthorModel>.NewConfig().IgnoreNullValues(true).Ignore(dest => dest.ArchiveId).Ignore(dest => dest.Books);
+//TypeAdapterConfig<CatalogItemUpdateDTO, CatalogItem>.NewConfig().IgnoreNullValues(true).Ignore(dest => dest.Id);
 
 #endregion
 
