@@ -1,4 +1,4 @@
-import type { TagEntity } from "../../Types/Entities/tag.entity";
+import type { TagEntity } from "../Types/Entities/tag.entity";
 import { Datastore } from "./datastore";
 
 export class TagDatastore extends Datastore {
