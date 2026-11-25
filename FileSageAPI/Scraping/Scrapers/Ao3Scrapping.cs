@@ -1,5 +1,4 @@
-﻿
-using FileSageAPI.Database.Models;
+﻿using FileSageAPI.Database.Models;
 using FileSageAPI.Entities.Book.DTOs;
 using FileSageAPI.Entities.Url.DTOs;
 using FileSageAPI.Entities.Url.Layers;
@@ -8,7 +7,7 @@ using FileSageAPI.Types.Enums;
 using HtmlAgilityPack;
 using Microsoft.Playwright;
 
-namespace API.Scraping
+namespace FileSageAPI.Scraping.Scrapers
 {
     public class Ao3Scrapping : IScraping
     {

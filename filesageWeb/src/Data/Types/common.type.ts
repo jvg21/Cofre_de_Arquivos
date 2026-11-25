@@ -1,0 +1,1 @@
+export type FormOperation = "ins" | "upd" | "del"

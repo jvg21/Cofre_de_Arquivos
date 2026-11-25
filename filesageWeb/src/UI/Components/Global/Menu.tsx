@@ -22,15 +22,19 @@ export const Menu = () => {
 
     return (
         <div className={`${styles.menuBox}  ${isOpen ? styles.menuOpen : ""}`}>
-            <ul>
-                {
-                    MODULES.map((module) => (
-                        <li key={module.name}>
-                            <Link to={module.url}>{<module.icon />} {module.name} </Link>
-                        </li>
-                    ))
-                }
-            </ul>
+            <div className={`${styles.menuWheel}`}>
+
+
+                <ul>
+                    {
+                        MODULES.map((module) => (
+                            <li key={module.name}>
+                                <Link to={module.url}>{<module.icon />} {module.name} </Link>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
         </div>
     )
 }

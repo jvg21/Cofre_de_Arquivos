@@ -1,6 +1,6 @@
 using Microsoft.Playwright;
 
-namespace API.Scraping
+namespace FileSageAPI.Scraping
 {
     public class BrowserSession : IAsyncDisposable
     {

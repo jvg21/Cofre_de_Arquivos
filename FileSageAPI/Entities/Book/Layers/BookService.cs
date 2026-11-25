@@ -19,12 +19,12 @@ namespace FileSageAPI.Entities.Book.Layers
         }
         public async Task<List<ArchiveModel>> Get()
         {
-            return await _archiveService.Get(e => e.Author != null);
+            return await _archiveService.Get(e => e.Book != null);
         }
 
         public async Task<ArchiveModel> Get(int id)
         {
-            return await _archiveService.Get(id, e => e.Author != null);
+            return await _archiveService.Get(id, e => e.Book != null);
         }
 
         public async Task<List<ArchiveModel>> InsertBook(List<BookInsertDTO> dtos, bool validate, bool save)
@@ -33,7 +33,6 @@ namespace FileSageAPI.Entities.Book.Layers
 
             foreach (var dto in dtos)
             {
-
                 var archive = new ArchiveInsertDTO
                 {
                     TagsLink = dto.TagsLink,

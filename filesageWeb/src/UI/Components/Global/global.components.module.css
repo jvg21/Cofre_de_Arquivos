@@ -11,7 +11,7 @@
     background-color: var(--accent);
 }
 
-
+/************MENU******************/
 .menuBox{
     position: absolute;
     display: flex;
@@ -21,9 +21,20 @@
     height: 400px;
 
     opacity: 0;
-    background-color: aqua;
+    z-index: -10;
+}
+
+.menuWheel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    border-radius:50% ;
 }
 
 .menuBox.menuOpen{
     opacity: 1;
+    z-index: 100;
 }

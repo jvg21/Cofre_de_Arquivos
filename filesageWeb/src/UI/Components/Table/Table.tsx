@@ -1,5 +1,5 @@
 import type { Key, ReactNode } from "react"
-
+import style from './table.module.css'
 export type TableColumn<T> = {
     key: keyof T,
     label: string,
@@ -40,19 +40,19 @@ export const Table = <T extends Object>({ data, tableColumns, keyExtractor, load
     if (tableData.length === 0) return (<div><p>{emptyMessage}</p></div>)
 
     return (
-        <div >
-            <table>
+        <div className={style.tableWrapper}>
+            <table className={style.table}>
                 <thead>
-                    <tr>
+                    <tr className={style.tableRow} >
                         {activeTableColumns.map((column) =>
                         (
-                            <th key={String(column.key)}
+                            <th key={String(column.key)} className={style.tableHead}
                                 scope="col">{column.label}
                             </th>
                         ))}
 
                         {tableActions && tableActions.length > 0 && (
-                            <th key="actions" scope="col"  >
+                            <th key="actions" scope="col"  className={style.tableHead}>
                                 Actions
                             </th>
                         )}
@@ -61,7 +61,7 @@ export const Table = <T extends Object>({ data, tableColumns, keyExtractor, load
                 <tbody>
                     {
                         tableData.map((entity, index) => (
-                            <tr key={keyExtractor ? keyExtractor(entity) : index}>
+                            <tr key={keyExtractor ? keyExtractor(entity) : index} className={style.tableRow}>
                                 {activeTableColumns.map((column) => (
                                     <td key={String(column.key)}>
                                         {

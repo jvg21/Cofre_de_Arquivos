@@ -1,9 +1,10 @@
 ﻿
 using FileSageAPI.Entities.Url.Layers;
 using FileSageAPI.Scraping.Interface;
+using FileSageAPI.Scraping.Scrapers;
 using Microsoft.Playwright;
 
-namespace API.Scraping
+namespace FileSageAPI.Scraping
 {
     public static class ScrapingFunctions
     {
