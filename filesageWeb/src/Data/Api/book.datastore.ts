@@ -1,4 +1,4 @@
-import type { BookEntity, BookRequest } from "../Types/Entities/book.entity";
+import type { BookEntity, BookGetRequest, BookPatchRequest, BookPostRequest } from "../Types/Entities/book.entity";
 import { Datastore } from "./datastore";
 
 export class BookDatastore extends Datastore {
@@ -13,14 +13,14 @@ export class BookDatastore extends Datastore {
         return this.getRequest(this.urlSufix + `/${id}`);
     }
 
-    public async postBook(body: BookEntity) {
+    public async postBook(body: BookPostRequest[]) {
         return this.postRequest(this.urlSufix, body);
     }
-    public async patchBook(body: BookEntity) {
+    public async patchBook(body: BookPatchRequest[]) {
         return this.postRequest(this.urlSufix, body, 'PATCH');
     }
 
-    public castRequestBookToEntity(responseBody: BookRequest[]): BookEntity[] {
+    public castRequestBookToEntity(responseBody: BookGetRequest[]): BookEntity[] {
 
         return responseBody.map((book) => ({
             archiveId: book.id,

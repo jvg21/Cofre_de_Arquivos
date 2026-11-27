@@ -37,6 +37,13 @@ namespace FileSageAPI.Entities.Url.Layers
             return Ok(response.Adapt<List<UrlGetDTO>>());
         }
 
+        [HttpPost("name")]
+        public async Task<IActionResult> GetUrlName(string urlContent)
+        {
+            var response = UrlFunctions.GenerateUrlName(urlContent);
+            return Ok(response);
+        }
+
         [HttpPatch]
         public async Task<IActionResult> Update(List<UrlUpdateDTO> urls)
         {

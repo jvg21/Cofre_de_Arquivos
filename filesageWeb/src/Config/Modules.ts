@@ -23,10 +23,31 @@ export const MODULES: Module[] = [
         url: "/authors",
         icon: FaPerson
     },
-     {
-        name: "Tag",
+    {
+        name: "Tags",
         description: "Tag module",
         url: "/tags",
         icon: FaTags
+    },
+    {
+        name: "Comics",
+        description: "Comics module",
+        url: "/comics",
+        icon: FaTags,
+        hidden:true,
+    },
+    {
+        name: "Notes",
+        description: "Notes module",
+        url: "/notes",
+        icon: FaTags,
+        hidden:true
+    },
+    {
+        name: "Documents",
+        description: "Documents module",
+        url: "/documents",
+        icon: FaTags,
+        hidden:true,
     }
 ]

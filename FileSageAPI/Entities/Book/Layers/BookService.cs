@@ -74,7 +74,6 @@ namespace FileSageAPI.Entities.Book.Layers
                 response.Add(request);
             }
 
-
             if (save) await _archiveService.Save();
             return response;
         }

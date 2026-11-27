@@ -1,4 +1,4 @@
-import type { AuthorEntity, AuthorRequest } from "../Types/Entities/author.entity";
+import type { AuthorEntity, AuthorGetRequest, AuthorPatchRequest, AuthorPostRequest } from "../Types/Entities/author.entity";
 import { Datastore } from "./datastore";
 
 export class AuthorDatastore extends Datastore {
@@ -13,14 +13,14 @@ export class AuthorDatastore extends Datastore {
         return this.getRequest(this.urlSufix + `/${id}`);
     }
 
-    public async postAuthor(body: Partial<AuthorEntity>[]) {
+    public async postAuthor(body: AuthorPostRequest[]) {
         return this.postRequest(this.urlSufix, body);
     }
-    public async patchAuthor(body: Partial<AuthorEntity>) {
+    public async patchAuthor(body: AuthorPatchRequest[]) {
         return this.postRequest(this.urlSufix, body, 'PATCH');
     }
 
-    public castRequestAuthorToEntity(responseBody: AuthorRequest[]): AuthorEntity[] {
+    public castRequestAuthorToEntity(responseBody: AuthorGetRequest[]): AuthorEntity[] {
 
         return responseBody.map((author) => ({
             archiveId: author.id,
@@ -32,5 +32,6 @@ export class AuthorDatastore extends Datastore {
             ...author.author,
         } as AuthorEntity));
     }
+
 
 }
